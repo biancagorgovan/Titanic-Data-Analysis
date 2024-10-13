@@ -1,0 +1,90 @@
+GORGOVAN BIANCA MARIA 314CB
+CERINTA 1
+Functii Folosite:
+pd.read_csv(): incarca datele dintr-un fisier CSV intr-un DataFrame.
+DataFrame.shape: Returneaza dimensiunile DataFrame-ului, adica numarul de randuri si coloane.
+DataFrame.dtypes: Afiseaza tipurile de date ale fiecarei coloane.
+DataFrame.isnull().sum(): Calculeaza numarul de valori nule pentru fiecare coloana.
+DataFrame.duplicated().sum(): Determina numarul de randuri duplicate in DataFrame.
+
+CERINTA 2
+Functii Folosite:
+Series.value_counts(normalize=True): Calculeaza frecventa valorilor intr-o coloana, normalizata pentru a obtine procentaje.
+plt.bar(): Creeaza grafice cu bare pentru vizualizarea procentajelor.
+Descriere:
+Explorarea distributiei supravietuirii, claselor si genurilor pasagerilor. Graficele cu bare sunt folosite pentru a ilustra aceste procente 
+intr-un mod vizual usor de interpretat.
+
+CERINTA 3
+Functii Folosite:
+plt.hist(): Genereaza histograme pentru fiecare coloana numerica, afisand distributia datelor.
+Descriere:
+Histogramele sunt utile pentru a vedea distributia si posibilele outlier-e ale variabilelor numerice. 
+Fiecare histograma este salvata individual.
+
+CERINTA 4
+Functii Folosite:
+DataFrame.columns[data.isnull().any()]: Selecteaza coloanele care contin valori lipsa.
+DataFrame.groupby(): Gruparea datelor dupa starea de supravietuire pentru a analiza diferit proportiile de valori lipsa.
+Descriere:
+Identificarea si cuantificarea valorilor lipsa pentru a evalua necesitatea unor pasi de preprocesare ulterioara, cum ar fi imputatia.
+
+CERINTA 5
+Functii Folosite:
+DataFrame.apply(): Aplica o functie customizata pentru a determina categoria de varsta bazata pe intervale predefinite.
+plt.bar(): Vizualizarea numarului de pasageri pe categorii de varsta.
+Descriere:
+Categorisirea varstelor in grupe predefinite si analiza distributiei pasagerilor pe aceste categorii, folosind grafice cu bare.
+
+CERINTA 6
+Functii Folosite:
+DataFrame.groupby() si agg(): Calcularea sumei si numarului de supravietuitori pe categorii de varsta, apoi calcularea ratei de supravietuire.
+Descriere:
+Analiza detaliata a ratei de supravietuire a barbatilor, segmentata pe grupe de varsta, evidentiind posibile modele de supravietuire.
+
+CERINTA 7
+Functii Folosite:
+DataFrame.apply(): Determina procentul de copii la bord si ratele lor de supravietuire comparativ cu adultii.
+plt.bar(): Vizualizarea comparativa a ratelor de supravietuire pentru copii si adulti.
+Descriere:
+Compararea sanselor de supravietuire intre copii si adulti, ilustrata printr-un grafic cu bare care arata diferentele in supravietuire.
+
+CERINTA 8
+Functii Folosite:
+DataFrame.fillna(): inlocuirea valorilor lipsa cu statistici rezumative (media sau moda), aplicate pe grupuri specificate.
+Descriere:
+Implementarea unei strategii de imputatie pentru gestionarea valorilor lipsa, utilizand medii pe clase sau 
+modul pentru a pastra consistenta datelor in cadrul grupurilor.
+
+CERINTA 9
+Functii Folosite:
+re.search(): Aceasta functie din modulul re (Regular Expressions) este folosita pentru a cauta un anumit pattern in siruri de caractere. 
+in acest caz, este folosita pentru a extrage titlurile din numele pasagerilor.
+DataFrame.apply(): Aplica functii custom pe randuri sau coloane din DataFrame. Aici, este utilizata pentru a aplica functia de 
+extractie a titlului si pentru a verifica daca titlurile corespund sexului pasagerului, folosind un dictionar.
+plt.bar(): Genereaza grafice cu bare pentru a vizualiza numarul de titluri valide si invalide.
+DataFrame.value_counts(): Numara frecventa fiecarui titlu valid si invalid in DataFrame.
+Descriere:
+in aceasta cerinta, scriptul verifica corectitudinea titlurilor (de exemplu, Mr., Mrs., Miss, etc.) in raport cu sexul pasagerilor. 
+Titlurile sunt extrase din numele complet al pasagerilor folosind expresii regulate. Dupa extractie, fiecare titlu este comparat cu 
+sexul asteptat, conform unui dictionar prestabilit. Rezultatele sunt vizualizate printr-un grafic cu bare care arata distributia 
+titlurilor valide si invalide.
+
+CERINTA 10
+Functii Folosite:
+DataFrame.assign() sau operatorul de adunare pentru a crea o noua coloana 'Is_Alone', care indica daca pasagerii sunt singuri pe vas (nu au familie la bord).
+sns.histplot(): Aceasta functie din Seaborn este utilizata pentru a crea histograme care arata distributia supravietuirii in functie de starea de a fi singur.
+sns.catplot(): Folosit pentru a crea un grafic de tip 'swarm' care afiseaza relatia dintre clasa de calatorie, tarif si supravietuire pentru primele 100 de inregistrari.
+Descriere:
+Aceasta cerinta exploreaza cum starea de a fi singur la bord (adica fara frati, soti, parinti sau copii) influenteaza sansele de supravietuire. 
+Se genereaza o histograma pentru a vizualiza distributia supravietuirii pentru pasagerii singuri fata de cei cu rude. in plus, 
+se foloseste un grafic 'swarm' pentru a analiza relatia dintre clasa de calatorie, tariful platit si supravietuire intr-un subset al datelor, 
+permitand o vizualizare detaliata a modului in care acesti factori interactioneaza.
+Concluzii: Se poate observa ca in cazul persoanelor care nu au supravietuit, acestea erau majoritar insotite, iar majoritatea persoanele
+care au supravietuit nu erau insotite. Desi nu este factorul decisiv se observa, ca persoanele neinsotie au avut sanse mai mari de 
+supravietuire.
+Rezultate histigrama: InfluenceClassETC:
+Se poate observa ca in randul clasei 3, procentual a fost cea mai  ica rata de supravietuire, desi erau cei mai multi pasageri.
+Clasa a 2-a a avut cea mai mare rata de supravietuire.
+Se observa ca pretul nu are corelatie cu supravietuirea.
+Atasez in continuare output rulare, grafice fiecare cerinta, in ordine.
